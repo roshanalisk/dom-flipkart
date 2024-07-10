@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #root{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    </style>
+    <div id="root"></div>
+    <script>
+        let img="https://rukminim2.flixcart.com/image/416/416/xif0q/drum-kit-set/g/w/5/13-inch-3-piece-junior-drum-set-beginner-kids-musical-toys-original-imaghhmyyxqxcsxv.jpeg?q=70&amp;crop=false"
+        let title="drums"
+        let price=11999
+
+        let img1="https://rukminim2.flixcart.com/image/416/416/xif0q/acoustic-guitar/0/e/g/38-matt-medellin-original-imagtsc4bgq2gw3z.jpeg?q=70&amp;crop=false"
+        let title1="guitar"
+        let price1=5199
+
+        let img2="https://rukminim2.flixcart.com/image/416/416/k76ihe80/flute/j/g/q/c-sharp-medium-right-hand-bansuri-19-inch-beginner-foora-musical-original-imafpgh6cquszeaw.jpeg?q=70&amp;crop=false"
+        let title2="flute"
+        let price2=400
+
+        let pro1={name:title,img:img,price:price}
+        let pro2={name:title1,img:img1,price:price1}
+        let pro3={name:title2,img:img2,price:price2}
+
+        let allitem=[pro1,pro2,pro3]
+
+        let div=document.getElementById('root')
+
+        allitem.map((g)=>{
+            let img=document.createElement('img')
+            img.src=g.img
+            img.style.width="200px"
+
+            let h1=document.createElement('h1')
+            h1.innerHTML=g.name
+
+
+            div.appendChild(img)
+            img.appendChild(h1)
+            
+        })
+    </script>
+    
+</body>
+</html>
